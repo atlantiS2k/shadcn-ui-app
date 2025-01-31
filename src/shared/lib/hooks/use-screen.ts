@@ -45,3 +45,8 @@ export function useScreenSize(): ScreenSizeType {
 
   return screenSize;
 }
+
+export function useIsMobile(): boolean {
+  const screenSize = useScreenSize();
+  return screenSize === ScreenSize.Mobile;
+}

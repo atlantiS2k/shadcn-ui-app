@@ -1,6 +1,6 @@
-import { Articles, ArticlesComment } from "../types";
+import { Post, PostComment } from "../types";
 
-const mapPost = (post: Partial<Articles>): Articles => {
+const mapPost = (post: Partial<Post>): Post => {
   return {
     body: post?.body || "",
     title: post?.title || "",
@@ -9,9 +9,7 @@ const mapPost = (post: Partial<Articles>): Articles => {
   };
 };
 
-const mapPostComment = (
-  postComment: Partial<ArticlesComment>
-): ArticlesComment => {
+const mapPostComment = (postComment: Partial<PostComment>): PostComment => {
   const { title, ...mappedPost } = mapPost(postComment);
   return {
     ...mappedPost,
