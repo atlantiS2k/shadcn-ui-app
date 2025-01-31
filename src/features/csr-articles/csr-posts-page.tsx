@@ -17,7 +17,6 @@ export default function Posts() {
   const params = usePostsStore(postsSelectors.selectParams);
   const meta = usePostsStore(postsSelectors.selectMeta);
   const loadingStatus = usePostsStore(postsSelectors.selectLoading);
-  const resetStore = usePostsStore(postsSelectors.selectReset);
   const { isMounted } = useIsMounted();
 
   const [debouncedSearchValue] = useDebounce(params.search.value, 500);
@@ -47,23 +46,9 @@ export default function Posts() {
 
   return (
     <div>
-      <h1 className="text-3xl font-bold mb-2">Client-side Rendered Posts</h1>
-      <CardDescription className="text-xl mb-6">
-        Discover client-side rendered posts enhanced with{" "}
-        <span className="underline">infinite scroll</span> and efficient{" "}
-        <span className="underline">Zustand state management</span>, ensuring a
-        smooth and dynamic browsing experience.
-      </CardDescription>
-
-      <div className="w-full flex justify-end">
-        <Button
-          variant="destructive"
-          className="flex gap-1 items-center mb-6"
-          onClick={resetStore}
-        >
-          Reset zustand store to default state
-        </Button>
-      </div>
+      <h1 className="text-3xl font-bold mb-2 text-center">
+        Client-side Rendered Articles
+      </h1>
 
       <div className="mb-5 sticky top-1">
         <SearchBar loading={isLoading} inputProps={searchInputProps} />
@@ -72,7 +57,7 @@ export default function Posts() {
       {isLoadingInitial && <PostsListSkeletons count={10} />}
       {!isLoadingInitial && <PostsList articles={posts} />}
 
-      {isNoPostsFound && <div className="w-full text-center">Not found.</div>}
+      {isNoPostsFound && <div className="w-full text-center">Not found</div>}
 
       {isNotLastPage && (
         <div className="w-full flex justify-center">
@@ -81,7 +66,7 @@ export default function Posts() {
             onClick={loadMorePosts}
             loading={isLoading}
           >
-            Load more
+            Load more ...
           </Button>
         </div>
       )}

@@ -2,7 +2,6 @@ import { postServices } from "@/entities/post/api/services";
 import { PostsList } from "@/widgets/posts-list";
 import { PaginationWithLinks } from "@/ui/pagination-with-links";
 import { SearchWithLinks } from "@/ui/search-with-links";
-import { CardDescription } from "@/shared/ui/card";
 
 interface PostsProps {
   search: Record<string, string | undefined>;
@@ -21,13 +20,9 @@ export default async function Posts({ search }: PostsProps) {
 
   return (
     <div>
-      <h1 className="text-3xl font-bold mb-2">Server-side Rendered Posts</h1>
-
-      <CardDescription className="text-xl mb-6">
-        Experience seamless server-side rendering with full support for{" "}
-        <span className="underline">search</span> and{" "}
-        <span className="underline">pagination</span>
-      </CardDescription>
+      <h1 className="text-3xl font-bold mb-2 text-center">
+        Server-Side Rendering Articles
+      </h1>
 
       <div className="mb-5">
         <SearchWithLinks defaultValue={searchValue} />

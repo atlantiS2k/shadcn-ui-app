@@ -1,5 +1,5 @@
 export const logo = {
-  title: "Articles",
+  title: "Articles Blog App",
 };
 
 export const ROUTES = {
@@ -18,7 +18,7 @@ interface RouteProps {
 }
 
 export const routeList: RouteProps[] = [
-  { href: ROUTES.SSR_ARTICLES, title: "SSR Articles with Pagination" },
-  { href: ROUTES.CSR_ARTICLES, title: "CSR Articles with Load More" },
-  { href: ROUTES.SITEMAP, title: "Sitemap.xml", blank: true },
+  { href: ROUTES.SSR_ARTICLES, title: "SSR Articles" },
+  { href: ROUTES.CSR_ARTICLES, title: "CSR Articles" },
+  // { href: ROUTES.SITEMAP, title: "Sitemap.xml", blank: true },
 ];

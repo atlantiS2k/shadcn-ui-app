@@ -47,7 +47,7 @@ export function SearchBar({
 
   return (
     <div className={cn("mx-0", className)}>
-      <label className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">
+      <label className="mb-2 text-sm font-medium text-gray-600 sr-only dark:text-white">
         {inputProps.placeholder || "Поиск"}
       </label>
       <div className="relative">

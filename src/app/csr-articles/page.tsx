@@ -1,5 +1,5 @@
 import { metadataConfig } from "@/constants/metadata";
-import { CSRArticlesPage } from "@/features/csr-posts";
+import { CSRArticlesPage } from "@/features/csr-articles";
 import { Metadata } from "next";
 
 export const metadata: Metadata = metadataConfig.csrPage;

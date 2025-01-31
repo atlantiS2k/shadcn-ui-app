@@ -8,7 +8,7 @@ html {
 
 @layer base {
   ::-webkit-scrollbar {
-    width: 4px;
+    width: 2px;
   }
 
   ::-webkit-scrollbar-thumb {

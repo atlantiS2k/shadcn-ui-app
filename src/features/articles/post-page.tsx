@@ -14,23 +14,23 @@ interface PostsProps {
 export default async function PostPage(props: PostsProps) {
   return (
     <article>
-      <h1 className="text-3xl font-bold mb-6 truncate">
-        Post {props.post?.title}
+      <h1 className="text-2xl font-bold mb-6 truncate text-center">
+        Articles: {props.post?.title}
       </h1>
 
-      <CardTitle className="mt-7">Blog</CardTitle>
+      <CardTitle className="mt-7 text-center">Blog</CardTitle>
 
       <div className="border-b my-5" />
 
       <PostCard articles={props?.post} />
 
-      <CardTitle className="mt-7">Author</CardTitle>
+      <CardTitle className="mt-7 text-center">Author</CardTitle>
 
       <div className="border-b my-5" />
 
       <UserCard user={props.user} />
 
-      <CardTitle className="mt-7">Comments</CardTitle>
+      <CardTitle className="mt-7 text-center">Comments</CardTitle>
 
       <div className="border-b my-5" />
 

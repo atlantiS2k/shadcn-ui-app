@@ -35,7 +35,7 @@ export function SearchWithLinks({ defaultValue }: SearchWithLinks) {
     <div className="w-full flex gap-2 items-center">
       <SearchBar
         className="w-full"
-        debounceDelay={0}
+        debounceDelay={300}
         onDebounceChange={(v) => {
           setValue(v);
           if (!v) setSearchValue("");
@@ -44,7 +44,7 @@ export function SearchWithLinks({ defaultValue }: SearchWithLinks) {
       />
 
       <Link href={buildLink(value)}>
-        <Button>search</Button>
+        <Button>Search</Button>
       </Link>
     </div>
   );

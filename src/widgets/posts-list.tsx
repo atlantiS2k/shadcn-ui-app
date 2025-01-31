@@ -13,12 +13,16 @@ export interface ArticlesListProps {
 
 export function PostsList({ articles }: ArticlesListProps) {
   return (
-    <div className="space-y-4">
-      {articles.map((articles, index) => (
-        <PostCard articles={articles} key={articles.id + index}>
-          <div className="w-full flex justify-end p-3">
-            <Link href={paths.articles({ postId: articles.id })}>
-              <Button>Link to detail page</Button>
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      {articles.map((article, index) => (
+        <PostCard
+          articles={article}
+          key={article.id + index}
+          className="aspect-square"
+        >
+          <div className="w-full flex justify-center p-3">
+            <Link href={paths.articles({ postId: article.id })}>
+              <Button variant="default">Link to detail page</Button>
             </Link>
           </div>
         </PostCard>
@@ -29,8 +33,8 @@ export function PostsList({ articles }: ArticlesListProps) {
 
 export function PostsListSkeletons({ count }: { count: number }) {
   return (
-    <div className="space-y-4">
-      {getSkeleton(count, <Skeleton className={cn("w-full h-44")} />)}
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      {getSkeleton(count, <Skeleton className="aspect-square w-full" />)}
     </div>
   );
 }
