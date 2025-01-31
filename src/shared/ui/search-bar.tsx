@@ -52,7 +52,7 @@ export function SearchBar({
       </label>
       <div className="relative">
         <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-          <Search className="w-[20px] h-[20px] text-muted-foreground" />
+          <Search className="w-[20px] h-[20px]" />
         </div>
         <Input
           type="search"

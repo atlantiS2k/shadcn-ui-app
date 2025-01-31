@@ -40,8 +40,7 @@ export const Navbar = () => {
           <Link
             href="/"
             className={cn(
-              "text-base font-medium px-2 py-1 transition-all duration-300",
-              "hover:text-primary"
+              "text-base font-medium px-2 py-1 transition-all duration-300"
             )}
           >
             {logo.title}
@@ -86,10 +85,6 @@ export const Navbar = () => {
                         router.push(href);
                       }}
                       variant="ghost"
-                      className={cn(
-                        "hover:text-primary justify-start bg-accent/[.5]",
-                        checkIsActive(pathname, href) && "text-primary"
-                      )}
                     >
                       <span className="truncate">{title}</span>
                     </Button>
@@ -111,9 +106,7 @@ export const Navbar = () => {
               <NavigationMenuItem key={href}>
                 <NavigationMenuLink
                   className={cn(
-                    "text-base font-medium px-2 py-1 transition-all duration-300",
-                    "hover:text-primary",
-                    checkIsActive(pathname, href) && "text-primary"
+                    "text-base font-medium px-2 py-1 transition-all duration-300"
                   )}
                   asChild
                 >

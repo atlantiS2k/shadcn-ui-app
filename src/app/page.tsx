@@ -1,9 +1,24 @@
 import { metadataConfig } from "@/constants/metadata";
-import { HomePage } from "@/features/main";
-import type { Metadata } from "next";
+import { SsrPostsList } from "@/features/ssr-articles";
+import { Metadata } from "next";
 
-export const metadata: Metadata = metadataConfig.home;
+export const metadata: Metadata = metadataConfig.ssrPage;
 
-export default async function Page() {
-  return <HomePage />;
+const delayRequest = <T,>(data: T): Promise<T> => {
+  return new Promise((resolve) => setTimeout(() => resolve(data), 2000));
+};
+
+interface Props {
+  searchParams: Record<string, string | undefined>;
+}
+
+export default async function Page({ searchParams }: Props) {
+  const fakeResponse = await delayRequest({
+    success: true,
+    message: "fake request succsesuful",
+  });
+
+  console.log(fakeResponse);
+
+  return <SsrPostsList search={searchParams} />;
 }
