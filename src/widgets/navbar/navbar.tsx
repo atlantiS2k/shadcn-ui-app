@@ -106,7 +106,11 @@ export const Navbar = () => {
                 key={href}
                 asChild
               >
-                <Link href={href} target={"_blank"} className="text-base px-2">
+                <Link
+                  href={href}
+                  target={rest.blank ? "_blank" : undefined}
+                  className="text-base px-2"
+                >
                   {title}
                 </Link>
               </NavigationMenuLink>
