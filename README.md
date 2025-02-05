@@ -22,29 +22,21 @@ npm run dev or yarn dev
 
 ---
 
-## **Demos**
+
 
 ### **Main Page**
-
-**URL:** [https://next-js-blog-app-six-omega.vercel.app/](https://next-js-blog-app-six-omega.vercel.app/)
-
 **Description:**
 
 - Lazy-loaded posts displayed for optimized performance.
 
 ### **SSR Page**
 
-**URL:** [https://next-js-blog-app-six-omega.vercel.app/ssr-posts](https://next-js-blog-app-six-omega.vercel.app/ssr-posts)
 
 **Description:**
 
 - Fully Server-Side Rendered (SSR).
 - Search and pagination implemented using SSR.
 - Optimized for SEO.
-
-### **CSR Page**
-
-**URL:** [https://next-js-blog-app-six-omega.vercel.app/csr-posts](https://next-js-blog-app-six-omega.vercel.app/csr-posts)
 
 **Description:**
 
